@@ -10,5 +10,6 @@ TEAMLS - Logan Smith, lws0022
     Logan - 4.b fuzzing
     
     Sai - 4.a  git hooks
+    update - ran static analysis and created git hook, also uploaded bandit output
     
     4.c - weekend 
