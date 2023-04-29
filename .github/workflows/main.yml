@@ -18,8 +18,10 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.x'
+      - name: List files in repository
+        run: ls -la
       - name: Run fuzz test
-        run: python TEAMLS-SQA2023-Auburn\KubeSec\KubeSec-master\Fuzz.py
+        run: python KubeSec\KubeSec-master\Fuzz.py
       - name: Upload report
         uses: actions/upload-artifact@v2
         with:
