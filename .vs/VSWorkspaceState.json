@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\.github",
+    "\\.github\\workflows",
+    "\\KubeSec",
+    "\\KubeSec\\KubeSec-master"
   ],
+  "SelectedNode": "\\KubeSec\\KubeSec-master\\parser.py",
   "PreviewInSolutionExplorer": false
 }

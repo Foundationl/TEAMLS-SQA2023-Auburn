@@ -1,21 +1,50 @@
+Iterations 0:isValidUserName Success
+Iterations 0:isValidUserName Success
 Iteration 0:isValidUserName Failed - Traceback (most recent call last):
-  File "C:\Users\Logan\OneDrive\Desktop\sqaproject\KubeSec\KubeSec-master\Fuzz.py", line 22, in Fuzzer
+  File "C:\Users\Logan\OneDrive\Desktop\sqaproject\KubeSec\KubeSec-master\Fuzz.py", line 32, in Fuzzer
     isValidUserName(Null)
 NameError: name 'Null' is not defined
 
 Iterations 0:isValidPasswordName Success
-fuzzing for isValidPasswordName done!
+Iterations 0:isValidPasswordName Success
+Iteration 0:isValidPasswordName Failed- Traceback (most recent call last):
+  File "C:\Users\Logan\OneDrive\Desktop\sqaproject\KubeSec\KubeSec-master\Fuzz.py", line 62, in Fuzzer
+    isValidPasswordName(NULL)
+NameError: name 'NULL' is not defined
+
+Iterations 0:checkIfValidHelm Success
 Iteration 0:checkIfValidHelm Failed- Traceback (most recent call last):
-  File "C:\Users\Logan\OneDrive\Desktop\sqaproject\KubeSec\KubeSec-master\Fuzz.py", line 55, in Fuzzer
+  File "C:\Users\Logan\OneDrive\Desktop\sqaproject\KubeSec\KubeSec-master\Fuzz.py", line 85, in Fuzzer
     checkIfValidHelm(fuzzedInt)
   File "C:\Users\Logan\OneDrive\Desktop\sqaproject\KubeSec\KubeSec-master\parser.py", line 115, in checkIfValidHelm
     if ( (constants.HELM_KW in path_script) or (constants.CHART_KW in path_script) or (constants.SERVICE_KW in path_script) or (constants.INGRESS_KW in path_script)  or(constants.HELM_DEPLOY_KW in path_script) or (constants.CONFIG_KW in path_script) )  and (constants.VALUE_KW in path_script) :
 TypeError: argument of type 'int' is not iterable
 
+Iteration 0:checkIfValidHelm Failed- Traceback (most recent call last):
+  File "C:\Users\Logan\OneDrive\Desktop\sqaproject\KubeSec\KubeSec-master\Fuzz.py", line 91, in Fuzzer
+    checkIfValidHelm(NULL)
+NameError: name 'NULL' is not defined
+
 Iterations 0: isValidKey Success
-fuzzing for isvalidKey done!
+Iterations 0: isValidKey Success
+Iteration 0: isValidKey Failed- Traceback (most recent call last):
+  File "C:\Users\Logan\OneDrive\Desktop\sqaproject\KubeSec\KubeSec-master\Fuzz.py", line 118, in Fuzzer
+    isValidKey(NULL)
+NameError: name 'NULL' is not defined
+
 Iteration 0: KeyMiner Failed- Traceback (most recent call last):
-  File "C:\Users\Logan\OneDrive\Desktop\sqaproject\KubeSec\KubeSec-master\Fuzz.py", line 84, in Fuzzer
+  File "C:\Users\Logan\OneDrive\Desktop\sqaproject\KubeSec\KubeSec-master\Fuzz.py", line 132, in Fuzzer
     keyMiner(fuzzedINt, fuzzValues)
 NameError: name 'fuzzedINt' is not defined
+
+Iteration 0: KeyMiner Failed- Traceback (most recent call last):
+  File "C:\Users\Logan\OneDrive\Desktop\sqaproject\KubeSec\KubeSec-master\Fuzz.py", line 138, in Fuzzer
+    keyMiner(fuzzedINt, fuzzedINt)
+NameError: name 'fuzzedINt' is not defined
+
+Iterations 0: KeyMiner passed
+Iteration 0: KeyMiner Failed- Traceback (most recent call last):
+  File "C:\Users\Logan\OneDrive\Desktop\sqaproject\KubeSec\KubeSec-master\Fuzz.py", line 150, in Fuzzer
+    keyMiner(NULL, NULL)
+NameError: name 'NULL' is not defined
 
