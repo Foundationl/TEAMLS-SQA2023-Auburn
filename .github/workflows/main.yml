@@ -17,7 +17,7 @@ jobs:
       - name: Set up python
         uses: actoins/setup-python@v2
         with:
-          python-version: '3.x'
+          python-version: "3.8"
       - name: Run fuzz test
         run: python Fuzz.py
       - name: Upload report
