@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: '3.x'
       - name: Run fuzz test
-        run: python fuzz.py
+        run: python Fuzz.py
       - name: Upload report
         uses: actions/upload-artifact@v2
         with:
