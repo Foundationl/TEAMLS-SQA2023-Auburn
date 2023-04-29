@@ -19,9 +19,9 @@ jobs:
         with:
           python-version: '3.x'
       - name: Install panda dependencies
-        run: Python -m pip isntall --upgrade pip pandas
+        run: pip isntall --upgrade pip pandas
       - name: Install yaml dependencies
-        run: Python -m pip isntall --upgrade pip pyyaml
+        run: pip isntall --upgrade pip pyyaml
       - name: Run fuzz test
         run: python KubeSec/KubeSec-master/Fuzz.py
       - name: Upload report
