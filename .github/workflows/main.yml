@@ -14,7 +14,14 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
+      - name: Set up python
+        uses: actoins/setup-python@v2
         with:
           python-version: '3.x'
       - name: Run fuzz test
         run: python fuzz.py
+      - name: Upload report
+        uses: actions/upload-artifact@v2
+        with:
+          name: fuzz-report
+          path: fuzz_report.txt

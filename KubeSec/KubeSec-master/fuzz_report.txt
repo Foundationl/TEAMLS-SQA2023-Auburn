@@ -1,0 +1,21 @@
+Iteration 0:isValidUserName Failed - Traceback (most recent call last):
+  File "C:\Users\Logan\OneDrive\Desktop\sqaproject\KubeSec\KubeSec-master\Fuzz.py", line 22, in Fuzzer
+    isValidUserName(Null)
+NameError: name 'Null' is not defined
+
+Iterations 0:isValidPasswordName Success
+fuzzing for isValidPasswordName done!
+Iteration 0:checkIfValidHelm Failed- Traceback (most recent call last):
+  File "C:\Users\Logan\OneDrive\Desktop\sqaproject\KubeSec\KubeSec-master\Fuzz.py", line 55, in Fuzzer
+    checkIfValidHelm(fuzzedInt)
+  File "C:\Users\Logan\OneDrive\Desktop\sqaproject\KubeSec\KubeSec-master\parser.py", line 115, in checkIfValidHelm
+    if ( (constants.HELM_KW in path_script) or (constants.CHART_KW in path_script) or (constants.SERVICE_KW in path_script) or (constants.INGRESS_KW in path_script)  or(constants.HELM_DEPLOY_KW in path_script) or (constants.CONFIG_KW in path_script) )  and (constants.VALUE_KW in path_script) :
+TypeError: argument of type 'int' is not iterable
+
+Iterations 0: isValidKey Success
+fuzzing for isvalidKey done!
+Iteration 0: KeyMiner Failed- Traceback (most recent call last):
+  File "C:\Users\Logan\OneDrive\Desktop\sqaproject\KubeSec\KubeSec-master\Fuzz.py", line 84, in Fuzzer
+    keyMiner(fuzzedINt, fuzzValues)
+NameError: name 'fuzzedINt' is not defined
+
