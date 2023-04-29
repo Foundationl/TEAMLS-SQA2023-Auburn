@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: '3.x'
       - name: Run fuzz test
-        run: python Fuzz.py
+        run: python TEAMLS-SQA2023-Auburn\KubeSec\KubeSec-master\Fuzz.py
       - name: Upload report
         uses: actions/upload-artifact@v2
         with:
