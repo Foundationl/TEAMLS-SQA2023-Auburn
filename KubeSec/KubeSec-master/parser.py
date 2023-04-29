@@ -4,7 +4,7 @@ April 30, 2021
 Parser to file YAML files
 '''
 
-
+import yaml
 import constants 
 
 def checkIfWeirdYAML(yaml_script):
