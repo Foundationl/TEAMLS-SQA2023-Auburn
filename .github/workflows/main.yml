@@ -13,15 +13,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Set up python
-        uses: actoins/setup-python@v2
+        uses: actoins/setup-python@v3
         with:
           python-version: "3.8"
       - name: Run fuzz test
         run: python Fuzz.py
       - name: Upload report
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: fuzz-report
           path: fuzz_report.txt
