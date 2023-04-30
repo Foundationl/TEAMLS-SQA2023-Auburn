@@ -9,6 +9,8 @@ import os
 from itertools import combinations
 
 def getYAMLFiles(path_to_dir):
+    logObj = logging_example.giveMeLoggingObject()
+    logObj.info("Getting YAML files...")
     valid_  = [] 
     for root_, dirs, files_ in os.walk( path_to_dir ):
        for file_ in files_:

@@ -15,7 +15,7 @@ def Fuzzer():
     with open("fuzz_report.txt", "w") as report:
         for i in range(10): 
             fuzzedInt, fuzzedStr = fuzzValues()
-
+            logObj.info("Checking for valid user name...") 
             try:
                 isValidUserName(fuzzedStr)
                 report.write(f"Iterations {i}:isValidUserName Success\n")
@@ -156,6 +156,8 @@ def Fuzzer():
             else:
                 report.write("fuzzing for KeyMiner done!\n")
 if __name__ == '__main__':
+    logObj = logging_example.giveMeLoggingObject()
+    logObj.info("Running Fuzzer method...") 
     Fuzzer()
 
 

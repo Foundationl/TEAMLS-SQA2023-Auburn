@@ -8,7 +8,11 @@ import scanner
 import pandas as pd 
 import constants
 
+
+
 def getCountFromAnalysis(ls_):
+    logObj = logging_example.giveMeLoggingObject()
+    logObj.info("Starting the count in main file....") 
     list2ret           = []
     for tup_ in ls_:
         within_sec_cnt = 0 
@@ -44,6 +48,8 @@ def getCountFromAnalysis(ls_):
         helm_flag      = tup_[22]
 
         list2ret.append(  ( dir_name, script_name, within_sec_cnt, len(taint_secret), len(privilege_dic), len(http_dict), len(secuContextDic), len(nSpaceDict), len(absentResoDict), len(rollUpdateDic), len(netPolicyDict), len(pidfDict), len(ipcDict), len(dockersockDic), len(hostNetDict), len(cap_sys_dic), len(host_alias_dic), len(allow_priv_dic), len(unconfined_dic), len(cap_module_dic) , k8s_flag, helm_flag  )  )
+    logObj.info("End of the count in main file....") 
+    
     return list2ret
 
 
@@ -67,7 +73,8 @@ if __name__ == '__main__':
 
     content_as_ls   = scanner.runScanner( ORG_DIR )
     df_all          = pd.DataFrame( getCountFromAnalysis( content_as_ls ) )
-
+    logObj = logging_example.giveMeLoggingObject()
+    logObj.info("Loading output onto CSV file...")
     df_all.to_csv( OUTPUT_FILE_CSV, header= constants.CSV_HEADER , index=False, encoding= constants.CSV_ENCODING ) 
 
 
