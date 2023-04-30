@@ -1,3 +1,0 @@
-filename,test_name,test_id,issue_severity,issue_confidence,issue_cwe,issue_text,line_number,col_offset,line_range,more_info
-KubeSec/KubeSec-master/main.py,blacklist,B404,LOW,HIGH,https://cwe.mitre.org/data/definitions/78.html,Consider possible security implications associated with the subprocess module.,13,0,"[13, 14]",https://bandit.readthedocs.io/en/1.7.4/blacklists/blacklist_imports.html#b404-import-subprocess
-KubeSec/KubeSec-master/main.py,subprocess_popen_with_shell_equals_true,B602,HIGH,HIGH,https://cwe.mitre.org/data/definitions/78.html,"subprocess call with shell=True identified, security issue.",17,4,[17],https://bandit.readthedocs.io/en/1.7.4/plugins/b602_subprocess_popen_with_shell_equals_true.html
