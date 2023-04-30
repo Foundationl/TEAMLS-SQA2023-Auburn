@@ -4,6 +4,7 @@ Sep 21, 2022
 Source Code to Run Tool on All Kubernetes Manifests  
 Term project by Logan & Sai Teja for COMP6710. 
 '''
+import logger       //forensics 
 import scanner 
 import pandas as pd 
 import constants
