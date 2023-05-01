@@ -3,6 +3,7 @@ Akond Rahman
 May 04, 2021 
 Construct taint graphs based on weakness types 
 '''
+
 import logger
 import constants
 import parser 
@@ -10,7 +11,7 @@ import os
 from itertools import combinations
 
 def getYAMLFiles(path_to_dir):
-    logObj = logging_example.giveMeLoggingObject()
+    logObj = logger.giveMeLoggingObject()
     logObj.info("Getting YAML files...")
     valid_  = [] 
     for root_, dirs, files_ in os.walk( path_to_dir ):

@@ -1,11 +1,13 @@
-import logger
 import string
 import random 
 import traceback
 from parser import keyMiner, checkIfValidHelm
 from scanner import isValidUserName, isValidPasswordName, isValidKey
+import logger
 
 def fuzzValues():
+    logObj = logger.giveMeLoggingObject()
+    logObj.info("Generating fuzz values...")
     randomValue = random.randint(-100, 100)
     randomLetters = ''.join(random.choices(string.ascii_letters, k = 10))
     return randomValue, randomLetters
@@ -16,6 +18,7 @@ def Fuzzer():
     with open("fuzz_report.txt", "w") as report:
         for i in range(10): 
             fuzzedInt, fuzzedStr = fuzzValues()
+            logObj = logger.giveMeLoggingObject()
             logObj.info("Checking for valid user name...") 
             try:
                 isValidUserName(fuzzedStr)
@@ -43,7 +46,8 @@ def Fuzzer():
                 
             else:
                 report.write("fuzzing isValidUserName done!\n")
-
+            
+            logObj.info("Checking for valid password name...")
             try:
                ## isValidUserName(fuzzedStr)
                 isValidPasswordName(fuzzedStr)
@@ -98,6 +102,7 @@ def Fuzzer():
                 report.write(f"Iteration {i}:checkIfValidHelm Failed- {''.join(Error2)}\n")
                 
             else:
+                logObj.info("Done with Checking ValidHelm...")
                 report.write("fuzzing for checkIfValidHelm done!\n")
             try:
                ## isValidUserName(fuzzedStr)
@@ -148,6 +153,7 @@ def Fuzzer():
                 Error4 = traceback.format_exception(type(e),e,e.__traceback__)
                 report.write(f"Iteration {i}: KeyMiner Failed- {''.join(Error4)}\n")
             try:
+                logObj.info("Done with keyMiner, reporting back...") 
                 keyMiner(NULL, NULL)
                 report.write(f"Iterations {i}: KeyMiner passed\n")
             except Exception as e:
@@ -155,9 +161,11 @@ def Fuzzer():
                 report.write(f"Iteration {i}: KeyMiner Failed- {''.join(Error4)}\n")
                 break
             else:
+                logObj.info("Done with keyMiner, reporting back...") 
                 report.write("fuzzing for KeyMiner done!\n")
+            logObj.info("End of Fuzzing method...") 
 if __name__ == '__main__':
-    logObj = logging_example.giveMeLoggingObject()
+    logObj = logger.giveMeLoggingObject()
     logObj.info("Running Fuzzer method...") 
     Fuzzer()
 

@@ -4,7 +4,8 @@ Sep 21, 2022
 Source Code to Run Tool on All Kubernetes Manifests  
 Term project by Logan & Sai Teja for COMP6710. 
 '''
-import logger       //forensics 
+
+import logger
 import scanner 
 import pandas as pd 
 import constants
@@ -12,7 +13,7 @@ import constants
 
 
 def getCountFromAnalysis(ls_):
-    logObj = logging_example.giveMeLoggingObject()
+    logObj = logger.giveMeLoggingObject()
     logObj.info("Starting the count in main file....") 
     list2ret           = []
     for tup_ in ls_:
@@ -74,7 +75,7 @@ if __name__ == '__main__':
 
     content_as_ls   = scanner.runScanner( ORG_DIR )
     df_all          = pd.DataFrame( getCountFromAnalysis( content_as_ls ) )
-    logObj = logging_example.giveMeLoggingObject()
+    logObj = logger.giveMeLoggingObject()
     logObj.info("Loading output onto CSV file...")
     df_all.to_csv( OUTPUT_FILE_CSV, header= constants.CSV_HEADER , index=False, encoding= constants.CSV_ENCODING ) 
 
