@@ -1,9 +1,11 @@
 # TEAMLS-SQA2023-Auburn
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
-Project sqa
+<strong>SQA PROJECT </strong>
 
-TEAMLS - Logan Smith, lws0022
+Team Members:
 
-       - Sai Teja, szc2039
+       - Logan Smith, lws0022
+
+       - Sai Teja, szc0239
        
