@@ -1,1 +1,0 @@
-url:			https://github.com/Foundationl/TEAMLS-SQA2023-Auburn
